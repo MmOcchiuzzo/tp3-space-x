@@ -1,6 +1,6 @@
-import  getData  from '/src/utils/getData.js';
-import  getHash  from '/src/utils/getHash.js';
-
+import { getData } from '../utils/getData.js';
+import getHash from '../utils/getHash.js';
+ 
 export const Character = async () => {
     const id = getHash();
     const launches = await getData();
