@@ -1,6 +1,6 @@
-import { Home } from './src/pages/Home.js';
-import { Character } from './src/pages/Character.js';
-import Header from './src/template/Header.js';
+import { Home } from '/src/pages/Home.js';
+import { Character } from '/src/pages/Character.js';
+import { Header } from '/src/templates/Header';
 
 const routes = {
     '/': Home,
@@ -17,9 +17,6 @@ const resolveRoute = (route) => {
 const router = async () => {
     const header = document.getElementById('header');
     const app = document.getElementById('app');
-
-    //     header.innerHTML = await Header();
-
     const hash = window.location.hash.slice(1).toLowerCase() || '/';
     const route = resolveRoute(hash);
     const renderComponent = routes[route];
